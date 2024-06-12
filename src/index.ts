@@ -59,6 +59,7 @@ export type SwiperCardOptions = {
   disableRightSwipe?: boolean;
   disableLeftSwipe?: boolean;
   disableTopSwipe?: boolean;
+  limitTopSwipe?: boolean;
   translateXRange?: number[];
   rotateOutputRange?: number[];
   rotateInputRange?: number[];
