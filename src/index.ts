@@ -29,6 +29,7 @@ export type SwiperOptions<T> = {
   disableRightSwipe?: boolean;
   disableLeftSwipe?: boolean;
   disableTopSwipe?: boolean;
+  limitTopSwipe?: boolean;
   //* Rotation Animation Prop
   translateXRange?: number[];
   translateYRange?: number[];

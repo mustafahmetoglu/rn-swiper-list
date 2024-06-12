@@ -20,6 +20,7 @@ const Swiper = <T,>(
     disableRightSwipe,
     disableLeftSwipe,
     disableTopSwipe,
+    limitTopSwipe,
     translateXRange = [-windowWidth / 3, 0, windowWidth / 3],
     translateYRange = [-windowHeight / 3, 0, windowHeight / 3],
     rotateInputRange = [-windowWidth / 3, 0, windowWidth / 3],
@@ -84,6 +85,7 @@ const Swiper = <T,>(
         outputOverlayLabelRightOpacityRange={
           outputOverlayLabelRightOpacityRange
         }
+        limitTopSwipe={limitTopSwipe}
         inputOverlayLabelLeftOpacityRange={inputOverlayLabelLeftOpacityRange}
         outputOverlayLabelLeftOpacityRange={outputOverlayLabelLeftOpacityRange}
         inputOverlayLabelTopOpacityRange={inputOverlayLabelTopOpacityRange}

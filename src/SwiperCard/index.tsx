@@ -37,6 +37,7 @@ const SwipeableCard = forwardRef<
       disableRightSwipe,
       disableLeftSwipe,
       disableTopSwipe,
+      limitTopSwipe,
       translateXRange,
       translateYRange,
       rotateInputRange,
@@ -53,6 +54,7 @@ const SwipeableCard = forwardRef<
       onSwipeStart,
       onSwipeActive,
       onSwipeEnd,
+      
     },
     ref
   ) => {
@@ -128,7 +130,7 @@ const SwipeableCard = forwardRef<
         if (onSwipeActive) runOnJS(onSwipeActive)();
 
         translateX.value = event.translationX;
-        translateY.value = event.translationY;
+        translateY.value = limitTopSwipe ? event.translationY/3: event.translationY;
         if (height / 3 < Math.abs(event.translationY)) {
           nextActiveIndex.value = interpolate(
             translateY.value,
